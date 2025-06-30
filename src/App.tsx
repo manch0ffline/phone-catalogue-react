@@ -1,21 +1,39 @@
-import React from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './App.scss';
+import { Footer } from './components/Footer';
+import { Menu } from './components/Menu';
+import { TopBar } from './components/TopBar';
+import { Outlet } from 'react-router-dom';
+import { getAccessories, getPhones, getTablets } from './api';
+import { PhonesContext } from './contexts/PhonesContext';
+import { TabletContext } from './contexts/TabletsContext';
+import { AccessoriesContext } from './contexts/AccessoriesContext';
 
-interface Props {
-  onClick: () => void;
-  children: React.ReactNode;
-}
+export const App = () => {
+  const { setPhones } = useContext(PhonesContext);
+  const { setTablets } = useContext(TabletContext);
+  const { setAccessories } = useContext(AccessoriesContext);
 
-export const Provider: React.FC<Props> = React.memo(({ onClick, children }) => (
-  <button type="button" onClick={onClick}>
-    {children}
-  </button>
-));
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-export const App: React.FC = () => {
+  useEffect(() => {
+    getPhones().then(loadedPhones => setPhones(loadedPhones));
+    getTablets().then(loadedTablets => setTablets(loadedTablets));
+    getAccessories().then(loadedAccessories =>
+      setAccessories(loadedAccessories),
+    );
+  }, []);
+
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>TodoList</Provider>
+    <div className="App">
+      <Menu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      <TopBar onMenuToggle={() => setIsMenuOpen(!isMenuOpen)} />
+
+      <div className="App__outlet">
+        <Outlet />
+      </div>
+
+      <Footer />
     </div>
   );
 };

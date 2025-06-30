@@ -4,9 +4,9 @@ This project is a web application built with React that serves as a catalog for 
 
 ## Live Demo
 
-Experience the live website: [Phone Catalog](https://manch0ffline.github.io/phone-catalogue-react/)
+Experience the live website: [**Phone Catalog**](https://manch0ffline.github.io/phone-catalogue-react/)
 
-[Design Reference](https://www.figma.com/design/BUusqCIMAWALqfBahnyIiH/Phone-catalog--V2--Original-Dark?node-id=0-1&p=f&t=8uHIkP8Q0NQwQgL9-0)
+[**Design Reference**](https://www.figma.com/design/BUusqCIMAWALqfBahnyIiH/Phone-catalog--V2--Original-Dark?node-id=0-1&p=f&t=8uHIkP8Q0NQwQgL9-0)
 
 # Project Description
 
@@ -15,14 +15,14 @@ This is an intuitive Single Page Application (SPA) that helps users keep track o
 
 ## Technologies Used
 
-- React: For building the user interface.
-- TypeScript (TS) & JavaScript (JS) (.tsx files): For type-safe and robust application logic.
-- Swiper: For creating modern and responsive carousels/sliders.
-- Classnames: For conditionally joining class names together.
-- SCSS: For advanced and maintainable styling.
-- Local Storage: For client-side data persistence.
-- React Context API: For state management across components.
-- React Router DOM: For declarative routing in the application.
+- **React**: For building the user interface.
+- **TypeScript** (TS) & **JavaScript** (JS) (.tsx files): For type-safe and robust application logic.
+- **Swiper**: For creating modern and responsive carousels/sliders.
+- **Classnames**: For conditionally joining class names together.
+- **SCSS**: For advanced and maintainable styling.
+- **Local Storage**: For client-side data persistence.
+- **React Context API**: For state management across components.
+- **React Router DOM**: For declarative routing in the application.
 
 ## Features
 
@@ -37,9 +37,9 @@ This is an intuitive Single Page Application (SPA) that helps users keep track o
 
 The page is adapted for various devices:
 
-- 📱 Smartphones
-- 💻 Tablets and laptops
-- 🖥️ Monitors
+- 📱 **Smartphones**
+- 💻 **Tablets and laptops**
+- 🖥️ **Monitors**
 
 ## How to Run the Project Locally
 
